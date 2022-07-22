@@ -1,0 +1,55 @@
+body {
+    font-family: centurygothic;
+    color: var(--color__black);
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header .header__top {
+    height: 94px;
+}
+header .header__nav {
+    height: 57px;
+}
+
+video {
+    width: 100%;
+}
+
+main {
+    margin-bottom: 60px;
+}
+
+main .new-projects {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+main .new-projects ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    row-gap: 60px;
+}
+
+main .service-description {
+    background-color: var(--color__grey--light3);
+}
+main .service-description > div {
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--color__grey--dark1);
+    height: 62px;
+}

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: centurygothic;
+    src: url(../fonts/centurygothic.ttf);
+}
+
+:root {
+    --color__black: #181819;
+    --color__grey--dark1: #24262D;
+    --color__grey--dark2: #393C49;
+    --color__grey: #9999A0;
+    --color__grey--light1: #C9CBD0;
+    --color__grey--light2: #E8EAEF;
+    --color__grey--light3: #FBFBFB;
+    --color__white: #FFFFFF;
+
+    --container: 1170px;
+  }
