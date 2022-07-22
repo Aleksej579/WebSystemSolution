@@ -19,8 +19,8 @@ function style() {
             .pipe(autoprefixer({
                 cascade: false
             }))
-            .pipe(concat('styles.css'))
-            .pipe(gulp.dest("./dist"))
+            .pipe(concat('style.css'))
+            .pipe(gulp.dest('./dist/style'))
     );
 }
 
