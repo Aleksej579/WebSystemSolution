@@ -34,6 +34,9 @@ body {
 header .header__top {
     height: 94px;
 }
+header .header__language-switch {
+    display: flex;
+}
 header .header__nav {
     height: 57px;
 }
