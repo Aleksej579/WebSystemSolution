@@ -1,0 +1,19 @@
+header .header__social a:hover path {
+    fill: var(--color__grey);
+}
+header .header__language-switch li button:hover {
+    color: var(--color__black);
+}
+header .header__nav a:hover {
+    text-decoration: underline;
+    color: var(--color__grey);
+}
+main .new-projects img:hover {
+    filter: brightness(0.8);
+}
+main .service-description button:hover {
+    border-color: transparent;
+}
+footer .footer__social a:hover path {
+    fill: var(--color__grey--light1);
+}

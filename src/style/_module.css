@@ -1,24 +1,22 @@
-header .header__top {
-    height: 94px;
-}
-header .header__social svg:not(:last-child) {
+/* HEADER-TOP-SOCIAL */
+header .header__social a:not(:last-child) {
     margin-right: 17px;
 }
+
+/* HEADER-TOP-LANGUAGE */
 header .header__language-switch {
     display: flex;
 }
 header .header__language-switch li:not(:last-child) {
     margin-right: 21px;
 }
-header .header__language-switch li {
+header .header__language-switch li button {
+    color: var(--color__grey);
     font-size: 11px;
     text-transform: uppercase;
 }
 
-header .header__nav {
-    height: 57px;
-    border-top: 1px solid var(--color__grey--light2);
-}
+/* HEADER-NAV */
 header .header__nav li span {
     display: block;
     height: 3px;
@@ -31,14 +29,44 @@ header .header__nav a {
     text-transform: uppercase;
     color: var(--color__black);
 }
-header .header__nav a:hover {
-    text-decoration: underline;
+
+/* VIDEO */
+.video {
+    width: 100%;
+    position: relative;
+}
+.video .play-control {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    right: 60px;
+    bottom: 40px;
+    z-index: 2;
+    cursor: pointer;
 }
 
+/* NEW PROJECTS */
 main .new-projects {
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
+}
+main .new-projects > :first-child {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+main .new-projects > :first-child:before,
+main .new-projects > :first-child:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: var(--color__black);
+    margin: 30px;
 }
 main .new-projects ul {
     display: flex;
@@ -54,6 +82,7 @@ main .new-projects figcaption {
     margin-top: 20px;
 }
 
+/* NEW DESCRIPTIONS */
 main .service-description {
     background-color: var(--color__grey--light3);
 }
@@ -69,4 +98,20 @@ main .service-description > div :first-child {
 main .service-description p {
     font-size: 15px;
     margin-bottom: 30px;
+}
+main .service-description button {
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px dashed var(--color__black);
+    padding-bottom: 5px;
+    margin-bottom: 60px;
+}
+
+/* FOOTER */
+footer .footer__social a:not(:last-child) {
+    margin-right: 20px;
+}
+footer .footer__copyright {
+    color: var(--color__grey--light1);
+    font-size: 13px;
 }

@@ -15,4 +15,9 @@
 
     --container: 1170px;
     --container-min: 750px;
-  }
+}
+
+h1,
+h2 {
+    font-size: 36px;
+}
