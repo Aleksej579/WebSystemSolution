@@ -1,0 +1,52 @@
+@media (max-width: 1200px) {
+    header,
+    main,
+    footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 768px) {
+    #mob-menu {
+        display: block;
+    }
+    .header__nav {
+        display: none;
+    }
+    .header__social {
+        display: none;
+    }
+    header .header__top {
+        height: 50px;
+    }
+    .header__logo svg {
+        width: 90px;
+        height: 15px;
+    }
+    header .header__language-switch li:not(:last-child) {
+        margin-right: 5px;
+    }
+    h1,
+    h2 {
+        font-size: 25px;
+    }
+    main .new-projects > :first-child {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    main .new-projects > :first-child:before,
+    main .new-projects > :first-child:after {
+        margin: 15px;
+    }
+    main .service-description > div :first-child {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .footer__social {
+        min-width: max-content;
+    }
+    footer .footer__social a:not(:last-child) {
+        margin-right: 5px;
+    }
+
+}

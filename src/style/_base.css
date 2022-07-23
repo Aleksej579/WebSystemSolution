@@ -15,9 +15,12 @@
 
     --container: 1170px;
     --container-min: 750px;
+
+    --time-anim: 0.4s;
 }
 
 h1,
 h2 {
     font-size: 36px;
+    text-align: center;
 }

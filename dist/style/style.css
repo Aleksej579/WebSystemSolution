@@ -15,11 +15,14 @@
 
     --container: 1170px;
     --container-min: 750px;
+
+    --time-anim: 0.4s;
 }
 
 h1,
 h2 {
     font-size: 36px;
+    text-align: center;
 }
 .container {
     max-width: var(--container);
@@ -49,9 +52,64 @@ video {
 footer {
     height: 62px;
 }
+@media (max-width: 1200px) {
+    header,
+    main,
+    footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 768px) {
+    #mob-menu {
+        display: block;
+    }
+    .header__nav {
+        display: none;
+    }
+    .header__social {
+        display: none;
+    }
+    header .header__top {
+        height: 50px;
+    }
+    .header__logo svg {
+        width: 90px;
+        height: 15px;
+    }
+    header .header__language-switch li:not(:last-child) {
+        margin-right: 5px;
+    }
+    h1,
+    h2 {
+        font-size: 25px;
+    }
+    main .new-projects > :first-child {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    main .new-projects > :first-child:before,
+    main .new-projects > :first-child:after {
+        margin: 15px;
+    }
+    main .service-description > div :first-child {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .footer__social {
+        min-width: -webkit-max-content;
+        min-width: -moz-max-content;
+        min-width: max-content;
+    }
+    footer .footer__social a:not(:last-child) {
+        margin-right: 5px;
+    }
+
+}
 /* HEADER-TOP-SOCIAL */
 header .header__social a:not(:last-child) {
     margin-right: 17px;
+    transition-duration: var(--time-anim);
 }
 
 /* HEADER-TOP-LANGUAGE */
@@ -65,9 +123,52 @@ header .header__language-switch li button {
     color: var(--color__grey);
     font-size: 11px;
     text-transform: uppercase;
+    transition-duration: var(--time-anim);
 }
 
 /* HEADER-NAV */
+#mob-menu {
+    display: none;
+    cursor: pointer;
+    /* text-align: right; */
+    /* float: right; */
+}
+#mob-menu {
+    width: 20px; height: 20px;
+    position: relative;
+}
+#mob-menu span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #181819;
+    transition: .3s ease-in-out;
+}
+#mob-menu span:nth-child(1) {
+    top: 0;
+}
+#mob-menu span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+#mob-menu span:nth-child(3) {
+    bottom: 0;
+}
+
+#mob-menu.is-close span:nth-child(1) {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+#mob-menu.is-close span:nth-child(2) {
+    display: none;
+}
+#mob-menu.is-close span:nth-child(3) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
 header .header__nav li span {
     display: block;
     height: 3px;
@@ -79,6 +180,7 @@ header .header__nav a {
     font-size: 11px;
     text-transform: uppercase;
     color: var(--color__black);
+    transition-duration: var(--time-anim);
 }
 
 /* VIDEO */
@@ -165,6 +267,7 @@ footer .footer__social a:not(:last-child) {
 footer .footer__copyright {
     color: var(--color__grey--light1);
     font-size: 13px;
+    text-align: center;
 }
 /* Reset and base styles  */
 * {
@@ -276,13 +379,38 @@ header .header__nav a:hover {
     color: var(--color__grey);
 }
 main .new-projects img:hover {
+    transition-duration: var(--time-anim);
     filter: brightness(0.8);
 }
 main .service-description button:hover {
     border-color: transparent;
 }
 footer .footer__social a:hover path {
+    transition-duration: var(--time-anim);
     fill: var(--color__grey--light1);
+}
+
+
+.is-active {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 100% !important;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    display: block !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.is-active ul {
+    flex-direction: column;
+}
+.is-active ul a {
+    font-size: inherit;
+}
+.is-active #mob-menu--close {
+    display: block !important;
 }
 body {
     font-family: centurygothic;
@@ -300,3 +428,4 @@ footer {
 @import "./_module.css";
 @import "./_state.css";
 @import "./_theme.css";
+@import "./_media.css";

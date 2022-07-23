@@ -9,11 +9,36 @@ header .header__nav a:hover {
     color: var(--color__grey);
 }
 main .new-projects img:hover {
+    transition-duration: var(--time-anim);
     filter: brightness(0.8);
 }
 main .service-description button:hover {
     border-color: transparent;
 }
 footer .footer__social a:hover path {
+    transition-duration: var(--time-anim);
     fill: var(--color__grey--light1);
+}
+
+
+.is-active {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 100% !important;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    display: block !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.is-active ul {
+    flex-direction: column;
+}
+.is-active ul a {
+    font-size: inherit;
+}
+.is-active #mob-menu--close {
+    display: block !important;
 }
