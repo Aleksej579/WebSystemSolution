@@ -14,14 +14,30 @@
     --color__white: #FFFFFF;
 
     --container: 1170px;
+    --container-min: 750px;
   }
-.container {
+/* .container {
     max-width: var(--container);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+} */
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    height: 100%;
+}
+.container-min {
+    max-width: var(--container-min);
+    margin: 0 auto;
+    height: 100%;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 body {
@@ -31,6 +47,11 @@ body {
 
 main {
     margin-bottom: 60px;
+}
+
+h1,
+h2 {
+    font-size: 36px;
 }
 
 video {
@@ -60,25 +81,17 @@ header .header__language-switch li {
     font-size: 11px;
     text-transform: uppercase;
 }
+
 header .header__nav {
     height: 57px;
     border-top: 1px solid var(--color__grey--light2);
 }
-header .header__nav li {
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-header .header__nav li:not(:last-child):after {
-    content: "";
+header .header__nav li span {
     display: block;
     height: 3px;
     width: 3px;
     border-radius: 50%;
     background-color: var(--color__black);
-    position: absolute;
-    top: 50%;
-    right: -1px;
 }
 header .header__nav a {
     font-size: 11px;
@@ -88,15 +101,6 @@ header .header__nav a {
 header .header__nav a:hover {
     text-decoration: underline;
 }
-header .header__nav span {
-    display: block;
-    height: 3px;
-    width: 3px;
-    border-radius: 50%;
-    background-color: var(--color__black);
-
-}
-
 
 main .new-projects {
     flex-direction: column;
@@ -111,12 +115,27 @@ main .new-projects ul {
     row-gap: 60px;
     text-align: center;
 }
+main .new-projects figcaption {
+    font-size: 18px;
+    color: var(--color__black);
+    margin-top: 20px;
+}
+
 main .service-description {
     background-color: var(--color__grey--light3);
 }
 main .service-description > div {
     flex-direction: column;
     align-items: center;
+}
+main .service-description > div :first-child {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+main .service-description p {
+    font-size: 15px;
+    margin-bottom: 30px;
 }
 
 /* Reset and base styles  */

@@ -14,4 +14,5 @@
     --color__white: #FFFFFF;
 
     --container: 1170px;
+    --container-min: 750px;
   }
