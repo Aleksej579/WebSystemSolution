@@ -16,14 +16,12 @@ function minifyHtml() {
 }
 function style() {
   return gulp
-    // .src("src/style/*.css")
     .src(["src/style/style.css", "src/style/parts/*.css", "src/style/media.css"])
-    .pipe(
-      autoprefixer({
-        cascade: false,
-      })
-    )
     .pipe(concat("style.css"))
+    .pipe(autoprefixer({
+      browsers: ['last 3 versions'],
+      cascade: false
+  }))
     .pipe(gulp.dest("./dist/style"));
 }
 function fonts() {
