@@ -1,3 +1,10 @@
+@import "./parts/_reset.css";
+@import "./parts/_base.css";
+@import "./parts/_layout.css";
+@import "./parts/_module.css";
+@import "./parts/_state.css";
+@import "./parts/_theme.css";
+@import "./media.css";
 @font-face {
     font-family: centurygothic;
     src: url(../fonts/centurygothic.ttf);
@@ -51,60 +58,6 @@ video {
 }
 footer {
     height: 62px;
-}
-@media (max-width: 1200px) {
-    header,
-    main,
-    footer {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-@media (max-width: 768px) {
-    #mob-menu {
-        display: block;
-    }
-    .header__nav {
-        display: none;
-    }
-    .header__social {
-        display: none;
-    }
-    header .header__top {
-        height: 50px;
-    }
-    .header__logo svg {
-        width: 90px;
-        height: 15px;
-    }
-    header .header__language-switch li:not(:last-child) {
-        margin-right: 5px;
-    }
-    h1,
-    h2 {
-        font-size: 25px;
-    }
-    main .new-projects > :first-child {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    main .new-projects > :first-child:before,
-    main .new-projects > :first-child:after {
-        margin: 15px;
-    }
-    main .service-description > div :first-child {
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-    .footer__social {
-        min-width: -webkit-max-content;
-        min-width: -moz-max-content;
-        min-width: max-content;
-    }
-    footer .footer__social a:not(:last-child) {
-        margin-right: 5px;
-    }
-
 }
 /* HEADER-TOP-SOCIAL */
 header .header__social a:not(:last-child) {
@@ -422,10 +375,57 @@ header .header__nav {
 footer {
     background-color: var(--color__grey--dark1);
 }
-@import "./_reset.css";
-@import "./_base.css";
-@import "./_layout.css";
-@import "./_module.css";
-@import "./_state.css";
-@import "./_theme.css";
-@import "./_media.css";
+@media (max-width: 1200px) {
+    header,
+    main,
+    footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 768px) {
+    #mob-menu {
+        display: block;
+    }
+    .header__nav {
+        display: none;
+    }
+    .header__social {
+        display: none;
+    }
+    header .header__top {
+        height: 50px;
+    }
+    .header__logo svg {
+        width: 90px;
+        height: 15px;
+    }
+    header .header__language-switch li:not(:last-child) {
+        margin-right: 5px;
+    }
+    h1,
+    h2 {
+        font-size: 25px;
+    }
+    main .new-projects > :first-child {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    main .new-projects > :first-child:before,
+    main .new-projects > :first-child:after {
+        margin: 15px;
+    }
+    main .service-description > div :first-child {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .footer__social {
+        min-width: -webkit-max-content;
+        min-width: -moz-max-content;
+        min-width: max-content;
+    }
+    footer .footer__social a:not(:last-child) {
+        margin-right: 5px;
+    }
+
+}

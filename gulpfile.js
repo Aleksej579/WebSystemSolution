@@ -1,8 +1,13 @@
 const gulp = require("gulp"),
   concat = require("gulp-concat"),
   htmlmin = require("gulp-htmlmin"),
-  autoprefixer = require("gulp-autoprefixer");
+  autoprefixer = require("gulp-autoprefixer"),
+  clean = require('gulp-clean');
 
+function cleandist() {
+  return gulp.src('./dist', {read: false})
+  .pipe(clean());
+}
 function minifyHtml() {
   return gulp
     .src("src/*.html")
@@ -11,7 +16,8 @@ function minifyHtml() {
 }
 function style() {
   return gulp
-    .src("src/style/*.css")
+    // .src("src/style/*.css")
+    .src(["src/style/style.css", "src/style/parts/*.css", "src/style/media.css"])
     .pipe(
       autoprefixer({
         cascade: false,
@@ -26,13 +32,13 @@ function fonts() {
     .pipe(gulp.dest("./dist/fonts"));
 }
 function images() {
-  return gulp.src("src/assets/*").pipe(gulp.dest("./dist/assets"));
+  return gulp.src("src/assets/**/*").pipe(gulp.dest("./dist/assets"));
 }
 function js() {
   return gulp
     .src("src/javascript/*.js")
     .pipe(concat("main.js"))
-    .pipe(gulp.dest("./dist"));
+    .pipe(gulp.dest("./dist/javascript"));
 }
 function watch() {
   gulp.watch("src/*.html", minifyHtml);
@@ -42,4 +48,4 @@ function watch() {
   gulp.watch("src/fonts/*", fonts);
 }
 
-module.exports.start = gulp.series(minifyHtml, style, js, fonts, images, watch);
+module.exports.start = gulp.series(cleandist, minifyHtml, style, js, fonts, images, watch);

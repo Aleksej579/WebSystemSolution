@@ -1,7 +1,7 @@
-@import "./_reset.css";
-@import "./_base.css";
-@import "./_layout.css";
-@import "./_module.css";
-@import "./_state.css";
-@import "./_theme.css";
-@import "./_media.css";
+@import "./parts/_reset.css";
+@import "./parts/_base.css";
+@import "./parts/_layout.css";
+@import "./parts/_module.css";
+@import "./parts/_state.css";
+@import "./parts/_theme.css";
+@import "./media.css";
