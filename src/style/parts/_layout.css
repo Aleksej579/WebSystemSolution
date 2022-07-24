@@ -23,6 +23,14 @@ header .header__nav {
 video {
     width: 100%;
 }
+.new-projects ul li {
+    width: 30%;
+}
+#service-description__wrapper {
+    max-height: 270px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
 footer {
     height: 62px;
 }

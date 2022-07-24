@@ -38,6 +38,9 @@
     main .new-projects > :first-child:after {
         margin: 15px;
     }
+    .new-projects ul li {
+        width: 40%;
+    }
     main .service-description > div :first-child {
         margin-top: 30px;
         margin-bottom: 20px;
@@ -49,4 +52,9 @@
         margin-right: 5px;
     }
 
+}
+@media (max-width: 480px){
+    .new-projects ul li {
+        width: 100%;
+    }
 }

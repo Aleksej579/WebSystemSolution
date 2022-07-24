@@ -56,6 +56,9 @@ header .header__nav {
 video {
     width: 100%;
 }
+.new-projects ul li {
+    width: 30%;
+}
 footer {
     height: 62px;
 }
@@ -354,10 +357,13 @@ footer .footer__social a:hover path {
     background-color: white;
     display: block !important;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 .is-active ul {
     flex-direction: column;
+}
+.is-active ul li:nth-child(even) {
+    display: none;
 }
 .is-active ul a {
     font-size: inherit;
@@ -415,6 +421,9 @@ footer {
     main .new-projects > :first-child:after {
         margin: 15px;
     }
+    .new-projects ul li {
+        width: 40%;
+    }
     main .service-description > div :first-child {
         margin-top: 30px;
         margin-bottom: 20px;
@@ -428,4 +437,9 @@ footer {
         margin-right: 5px;
     }
 
+}
+@media (max-width: 480px){
+    .new-projects ul li {
+        width: 100%;
+    }
 }

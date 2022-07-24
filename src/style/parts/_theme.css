@@ -8,3 +8,52 @@ header .header__nav {
 footer {
     background-color: var(--color__grey--dark1);
 }
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: var(--color__grey--dark2);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background-color: var(--color__grey--light1);
+}
+
+/* Tooltip */
+.tooltip {
+	display: inline;
+	position: relative;
+}
+.tooltip:hover:after {
+	content: attr(data-title);
+	z-index: 999;
+	position: absolute;
+	bottom: 26px;
+	left: 30%;
+	width: max-content;
+	padding: 7px 15px 10px 15px;
+	font-size: 10px;
+	font-weight: 300;
+	color: #fff;
+	background-color: #444;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+}
+.tooltip:hover:before {
+	content: "";
+	z-index: 1000;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	border-style: solid;
+	border-width: 6px 6px 0 6px;
+	border-color: #444 transparent;
+}

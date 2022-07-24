@@ -31,14 +31,39 @@ footer .footer__social a:hover path {
     background-color: white;
     display: block !important;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 .is-active ul {
     flex-direction: column;
+}
+.is-active ul li:nth-child(even) {
+    display: none;
 }
 .is-active ul a {
     font-size: inherit;
 }
 .is-active #mob-menu--close {
     display: block !important;
+}
+
+.is-select_nav a {
+    text-decoration: underline !important;
+    color: var(--color__grey) !important;
+}
+.is-select_lang button {
+    text-decoration: underline !important;
+    color: var(--color__black) !important;
+}
+.is-select_lang {
+    position: relative;
+}
+.is-select_lang:before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: var(--color__grey--dark1);
+    position: absolute;
+    left: calc(50% - 1.5px);
 }
