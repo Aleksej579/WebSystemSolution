@@ -9,4 +9,5 @@
 @font-face {
     font-family: centurygothic;
     src: url(../fonts/centurygothic.ttf);
+    font-display: swap;
 }
