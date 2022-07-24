@@ -3,15 +3,26 @@ let body = document.querySelector('body');
 let mobMenu = document.querySelector('#mob-menu');
 let nav = document.querySelector('.header__nav');
 
-mobMenu.onclick = function(){
-	this.classList.toggle('is-close');
-	nav.classList.toggle('is-active');
-	if (nav.classList.contains('is-active')) {
-		body.style.overflow = 'hidden';
-	} else {
-		body.style.overflow = 'auto';
-	}
-};
+if (window.screen.width <= 768 ) {
+	mobMenu.onclick = function(){
+		this.classList.toggle('is-close');
+		nav.classList.toggle('is-active');
+		if (nav.classList.contains('is-active')) {
+			body.style.overflow = 'hidden';
+		} else {
+			body.style.overflow = 'auto';
+		}
+	};
+	nav.querySelector("ul").addEventListener("click", () => {
+		mobMenu.classList.toggle('is-close');
+		nav.classList.toggle('is-active');
+		if (nav.classList.contains('is-active')) {
+			body.style.overflow = 'hidden';
+		} else {
+			body.style.overflow = 'auto';
+		}
+	})
+}
 
 // Read more
 let blockShortText = document.querySelector('#service-description__wrapper');
@@ -98,7 +109,24 @@ i18next.init({
     }
 });
 
-// i18next.changeLanguage('en')
+let btn_wrapper = document.querySelector('.header__language-switch');
+let btn_en = document.querySelector('#btn_en');
+let btn_ru = document.querySelector('#btn_ru');
+let btn_pol = document.querySelector('#btn_pol');
 
-let arrItemMenuTranslate = document.querySelectorAll('.header__nav ul li a');
-arrItemMenuTranslate.forEach((item, index) => item.innerHTML = i18next.t(`menuItem-${index}`));
+btn_wrapper.addEventListener("click", (e) => {
+	let locVariable;
+
+	if (e.target == btn_en) {
+		locVariable = btn_en.value;
+	} else if (e.target == btn_ru){
+		locVariable = btn_ru.value;
+	} else if (e.target == btn_pol) {
+		locVariable = btn_pol.value;
+	}
+
+	i18next.changeLanguage(locVariable);
+
+	let arrItemMenuTranslate = document.querySelectorAll('.header__nav ul li a');
+	arrItemMenuTranslate.forEach((item, index) => item.innerHTML = i18next.t(`menuItem-${index}`));
+})

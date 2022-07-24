@@ -3,15 +3,26 @@ let body = document.querySelector('body');
 let mobMenu = document.querySelector('#mob-menu');
 let nav = document.querySelector('.header__nav');
 
-mobMenu.onclick = function(){
-	this.classList.toggle('is-close');
-	nav.classList.toggle('is-active');
-	if (nav.classList.contains('is-active')) {
-		body.style.overflow = 'hidden';
-	} else {
-		body.style.overflow = 'auto';
-	}
-};
+if (window.screen.width <= 768 ) {
+	mobMenu.onclick = function(){
+		this.classList.toggle('is-close');
+		nav.classList.toggle('is-active');
+		if (nav.classList.contains('is-active')) {
+			body.style.overflow = 'hidden';
+		} else {
+			body.style.overflow = 'auto';
+		}
+	};
+	nav.querySelector("ul").addEventListener("click", () => {
+		mobMenu.classList.toggle('is-close');
+		nav.classList.toggle('is-active');
+		if (nav.classList.contains('is-active')) {
+			body.style.overflow = 'hidden';
+		} else {
+			body.style.overflow = 'auto';
+		}
+	})
+}
 
 // Read more
 let blockShortText = document.querySelector('#service-description__wrapper');
