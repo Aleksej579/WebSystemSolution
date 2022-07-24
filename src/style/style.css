@@ -5,3 +5,8 @@
 @import "./parts/_state.css";
 @import "./parts/_theme.css";
 @import "./media.css";
+
+@font-face {
+    font-family: centurygothic;
+    src: url(../fonts/centurygothic.ttf);
+}

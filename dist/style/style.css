@@ -5,11 +5,11 @@
 @import "./parts/_state.css";
 @import "./parts/_theme.css";
 @import "./media.css";
+
 @font-face {
     font-family: centurygothic;
     src: url(../fonts/centurygothic.ttf);
 }
-
 :root {
     --color__black: #181819;
     --color__grey--dark1: #24262D;
@@ -59,6 +59,11 @@ video {
 .new-projects ul li {
     width: 30%;
 }
+#service-description__wrapper {
+    max-height: 270px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
 footer {
     height: 62px;
 }
@@ -86,8 +91,6 @@ header .header__language-switch li button {
 #mob-menu {
     display: none;
     cursor: pointer;
-    /* text-align: right; */
-    /* float: right; */
 }
 #mob-menu {
     width: 20px; height: 20px;
@@ -200,7 +203,7 @@ main .service-description > div {
     align-items: center;
 }
 main .service-description > div :first-child {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     margin-bottom: 40px;
     text-align: center;
 }
@@ -371,6 +374,28 @@ footer .footer__social a:hover path {
 .is-active #mob-menu--close {
     display: block !important;
 }
+
+.is-select_nav a {
+    text-decoration: underline !important;
+    color: var(--color__grey) !important;
+}
+.is-select_lang button {
+    text-decoration: underline !important;
+    color: var(--color__black) !important;
+}
+.is-select_lang {
+    position: relative;
+}
+.is-select_lang:before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: var(--color__grey--dark1);
+    position: absolute;
+    left: calc(50% - 1.5px);
+}
 body {
     font-family: centurygothic;
     color: var(--color__black);
@@ -380,6 +405,53 @@ header .header__nav {
 }
 footer {
     background-color: var(--color__grey--dark1);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: var(--color__grey--dark2);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background-color: var(--color__grey--light1);
+}
+
+/* Tooltip */
+.tooltip {
+	display: inline;
+	position: relative;
+}
+.tooltip:hover:after {
+	content: attr(data-title);
+	z-index: 999;
+	position: absolute;
+	bottom: 26px;
+	left: 30%;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	padding: 7px 15px 10px 15px;
+	font-size: 10px;
+	font-weight: 300;
+	color: #fff;
+	background-color: #444;
+	border-radius: 3px;
+}
+.tooltip:hover:before {
+	content: "";
+	z-index: 1000;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	border-style: solid;
+	border-width: 6px 6px 0 6px;
+	border-color: #444 transparent;
 }
 @media (max-width: 1200px) {
     header,
