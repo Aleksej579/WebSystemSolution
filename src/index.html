@@ -93,12 +93,20 @@
             <source src="./assets/banner.webm" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <span class="play-control">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32" fill="none">
-                <rect opacity="0.418341" width="12" height="32" fill="white"/>
-                <rect opacity="0.418341" x="18" width="12" height="32" fill="white"/>
-            </svg>
-        </span>
+        <button class="play-control">
+            <span class="pause">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32" fill="none">
+                    <rect opacity="0.418341" width="12" height="32" fill="white"/>
+                    <rect opacity="0.418341" x="18" width="12" height="32" fill="white"/>
+                </svg>
+            </span>
+            <span class="play">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="37" viewBox="0 0 40 37" fill="none">
+                    <path opacity="0.4" d="M40 18.5L10 34.5215L10 2.47853L40 18.5Z" fill="white"/>
+                </svg>
+            </span>
+            
+        </button>
     </div>
 
     <main>
@@ -228,6 +236,8 @@
             </a>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.8.14/i18next.min.js"></script>
+    <script type='module' src="./javascript/translate.js"></script>
     <script src="./javascript/main.js"></script>
 </body>
 </html>

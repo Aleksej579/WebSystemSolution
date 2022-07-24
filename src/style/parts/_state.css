@@ -27,7 +27,7 @@ footer .footer__social a:hover path {
     left: 0;
     height: 100% !important;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
     background-color: white;
     display: block !important;
     padding-top: 50px;
@@ -66,4 +66,8 @@ footer .footer__social a:hover path {
     background-color: var(--color__grey--dark1);
     position: absolute;
     left: calc(50% - 1.5px);
+}
+
+.play {
+    display: none;
 }

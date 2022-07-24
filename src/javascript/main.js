@@ -41,3 +41,23 @@ blockLangSwitch.addEventListener('click', e => {
 		e.target.parentElement.classList.add('is-select_lang');
 	}
 })
+
+// Video control
+let btnVideo = document.querySelector('.play-control');
+let video = document.querySelector('video');
+let btnPause = document.querySelector('.pause');
+let btnPlay = document.querySelector('.play');
+
+btnPlay.style.display = 'none';
+
+btnVideo.addEventListener('click', () => {
+	if (video.paused) {
+        video.play();
+		btnPlay.style.display = 'none';
+		btnPause.style.display = 'block';
+    } else {
+        video.pause();
+		btnPause.style.display = 'none';
+		btnPlay.style.display = 'block';
+    }
+})
