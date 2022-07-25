@@ -37,3 +37,6 @@ Time to complete - up to 3 days
 The interface translation is done on the main navigation bar.
 
 Pages by clicking on the links were not created.
+
+![weart](https://user-images.githubusercontent.com/16978473/180731242-f8a797f0-72c2-4cd4-a45b-1787993b0411.png)
+
