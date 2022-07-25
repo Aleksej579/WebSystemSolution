@@ -57,4 +57,11 @@
     .new-projects ul li {
         width: 100%;
     }
+    .is-select_lang:before {
+        top: 0;
+    }
+    .footer .footer__copyright {
+        margin-bottom: -30px;
+        font-size: 11px;
+    }
 }
