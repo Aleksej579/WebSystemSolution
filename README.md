@@ -6,8 +6,6 @@ Test task - markup by layout in Figma
 
 ## Demo
 
-Insert gif or link to demo
-
 https://w-s-s.netlify.app/
 ## Roadmap
 
