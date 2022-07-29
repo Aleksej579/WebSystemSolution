@@ -72,6 +72,8 @@ btnVideo.addEventListener('click', () => {
 		btnPlay.style.display = 'block';
     }
 })
+
+// translate interface
 i18next.init({
 	lng: 'ru',
     debug: true,
